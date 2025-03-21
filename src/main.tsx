@@ -7,17 +7,17 @@ import { createRoot } from 'react-dom/client'
 import '../src/styles/index.css'
 import App from './App'
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
 
 createRoot(document.getElementById('root')!).render(
-  <StrictMode>
+<StrictMode>
+  <QueryClientProvider client={queryClient}>
    <ChakraProvider value={defaultSystem}>
      <ThemeProvider attribute="class" disableTransitionOnChange>
-     <QueryClientProvider client={queryClient}>
        <App />
        <ReactQueryDevtools/>
-     </QueryClientProvider>
-    </ThemeProvider>
-   </ChakraProvider>
+     </ThemeProvider>
+    </ChakraProvider>
+   </QueryClientProvider>
   </StrictMode>,
 )
