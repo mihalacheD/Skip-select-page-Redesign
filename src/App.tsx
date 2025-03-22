@@ -7,7 +7,10 @@ function App() {
     <>
      <Grid templateAreas={{
          base:`"nav" "main"`,
-    }}>
+    }}
+    py={8} px={4}
+    >
+
     <GridItem area='nav'>
        <NavBar/>
     </GridItem>

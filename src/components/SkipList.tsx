@@ -13,16 +13,16 @@ const SkipList = () => {
   if (error) return <Text color="red.500">Error loading skips</Text>;
 
   return (
-    <Container my={9}  maxW={{ base: "100%", "2xl": "65%" }} m='auto'>
-      <Flex direction='column' textAlign="center" mt={5} mb={8} gap={5}>
-        <Text fontSize={{ base: "3xl", lg: "4xl"}} fontWeight="bold">
+    <Container my={5}>
+      <Flex direction='column' textAlign="center" mt={5} mb={8} gap={3}>
+        <Text fontSize={{ base: "2xl", lg: "3xl"}} fontWeight="bold">
             Choose Your Skip Size
         </Text>
-        <Text fontSize={{ base: "2xl", lg: "3xl"}} fontWeight='medium' color='gray.500'>
+        <Text fontSize={{ base: "lg", lg: "xl"}} fontWeight='medium' color='var(--lightgray)'>
             Select the skip size that best suits your needs
         </Text>
     </Flex>
-    <SimpleGrid columns={{ base: 1, md: 2, lg: 2, xl: 3 }} gap={{ base: 6, xl: 8 }} my={10}>
+    <SimpleGrid columns={{ base: 1, md: 2, lg: 3, xl: 3 }} gap={{ base: 4, md: 5, lg: 6, xl: 7 }} my={10}>
       {skips?.map((skip) => (
           <SkipCard
             key={skip.id}

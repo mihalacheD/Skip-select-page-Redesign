@@ -85,26 +85,27 @@ const SkipCard = ({ skip, isSelected, onSelect }: Props) => {
         </Badge>
 
 
-      <Card.Body gap={{ base: 4, md: 6 }} p='0'>
-        <Text fontSize={{ base: "2xl", lg: "3xl"}} fontWeight="bold">{skip.size} Yard Skip</Text>
-        <Text fontSize={{ base: "xl", lg: "2xl"}} color='gray.400'>{skip.hire_period_days} day hire period</Text>
+      <Card.Body gap={{ base: 3, md: 4 }} p='0'>
+        <Text fontSize={{ base: "xl", lg: "2xl"}} fontWeight="bold" color='white'>{skip.size} Yard Skip</Text>
+        <Text fontSize={{ base: "lg", lg: "xl"}} color='var(--lightgray)'>{skip.hire_period_days} day hire period</Text>
 
         <Flex gap='3' alignItems='baseline' direction='row'>
-          <Text fontSize='3xl' fontWeight='bold' color='var(--blue)'>£{skip.totalPricePerWeek}</Text>
-          <Text fontSize='xl' color='gray.400'>per week</Text>
+          <Text fontSize='2xl' fontWeight='bold' color='var(--blue)'>£{skip.totalPricePerWeek}</Text>
+          <Text fontSize='lg' color='var(--lightgray)'>per week</Text>
         </Flex>
 
         <Button
-           size={{ base: "xl", lg: "2xl"}}
+           color='white'
+           size={{ base: "lg", lg: "xl"}}
            variant="subtle"
-           borderRadius="xl"
+           borderRadius="lg"
            bg={isSelected ? "var(--blue)" : "gray.800"}
            _active={{ transform: "scale(0.98)" }}
            onClick={!isDisabled ? onSelect : undefined}
            disabled={isDisabled}
            >
 
-          <Text fontSize='xl' fontWeight='semibold'>
+          <Text fontSize={{ base: "md", lg: "lg"}} fontWeight='semibold'>
             {isSelected ? "Selected" : "Select This Skip"}
           </Text>
 
