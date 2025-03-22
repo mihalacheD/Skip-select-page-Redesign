@@ -1,5 +1,6 @@
 import { GridItem, Grid } from "@chakra-ui/react"
 import NavBar from "./NavBar"
+import SkipList from "./components/SkipList"
 
 function App() {
   return(
@@ -11,7 +12,7 @@ function App() {
        <NavBar/>
     </GridItem>
     <GridItem area='main' >
-      Main
+       <SkipList/>
     </GridItem>
 </Grid>
     </>
