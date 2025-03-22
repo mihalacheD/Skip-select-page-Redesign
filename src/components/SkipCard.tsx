@@ -1,6 +1,6 @@
 import { Skip } from "@/hooks/useSkips"
 import { Badge, Box, Button, Card, Flex, Image, Text} from "@chakra-ui/react"
-import cardImg from '../assets/garden-waste.png'
+import cardImg from '../assets/waste-container.jpg'
 import { ArrowRight, TriangleAlert } from 'lucide-react';
 
 interface Props {
