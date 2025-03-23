@@ -1,13 +1,16 @@
 import useSkips from "@/hooks/useSkips";
 import { Container, Flex, SimpleGrid, Spinner, Text } from "@chakra-ui/react";
 import SkipCard from "./SkipCard";
-import { useState } from "react";
+
+interface Props {
+  selectedSkip: number | null;
+  setSelectedSkip: (id: number | null) => void;
+}
 
 
-
-const SkipList = () => {
+const SkipList =  ({ selectedSkip, setSelectedSkip }: Props) => {
   const { data: skips, isLoading, error } = useSkips();
-  const [selectedSkip, setSelectedSkip] = useState<number | null>(null);
+
 
   if (isLoading) return <Spinner color="blue.500" size="xl" />;
   if (error) return <Text color="red.500">Error loading skips</Text>;
