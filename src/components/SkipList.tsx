@@ -1,6 +1,7 @@
 import useSkips from "@/hooks/useSkips";
-import { Container, Flex, SimpleGrid, Spinner, Text } from "@chakra-ui/react";
+import { Container, Flex, SimpleGrid, Text } from "@chakra-ui/react";
 import SkipCard from "./SkipCard";
+import SkipCardSkeleton from "./SkipCardSkeleton";
 
 interface Props {
   selectedSkip: number | null;
@@ -10,9 +11,9 @@ interface Props {
 
 const SkipList =  ({ selectedSkip, setSelectedSkip }: Props) => {
   const { data: skips, isLoading, error } = useSkips();
+  const skeletons = [1, 2, 3, 4, 5, 6]
 
 
-  if (isLoading) return <Spinner color="blue.500" size="xl" />;
   if (error) return <Text color="red.500">Error loading skips</Text>;
 
   return (
@@ -26,6 +27,7 @@ const SkipList =  ({ selectedSkip, setSelectedSkip }: Props) => {
         </Text>
     </Flex>
     <SimpleGrid columns={{ base: 1, md: 2, lg: 3, xl: 3 }} gap={{ base: 4, md: 5, lg: 6, xl: 7 }} my={10}>
+      {isLoading && skeletons.map(skeleton => <SkipCardSkeleton key={skeleton}/>)}
       {skips?.map((skip) => (
           <SkipCard
             key={skip.id}
