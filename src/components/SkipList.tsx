@@ -17,7 +17,7 @@ const SkipList =  ({ selectedSkip, setSelectedSkip }: Props) => {
   if (error) return <Text color="red.500">Error loading skips</Text>;
 
   return (
-    <Container my={5}>
+    <Container my={5} maxW='7xl'>
       <Flex direction='column' textAlign="center" mt={5} mb={8} gap={3}>
         <Text fontSize={{ base: "2xl", lg: "3xl"}} fontWeight="bold">
             Choose Your Skip Size
