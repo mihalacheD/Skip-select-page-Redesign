@@ -1,54 +1,49 @@
-# React + TypeScript + Vite
+Skip Select Page Redesign
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a redesign of the skip selection page for WeWantWaste. The goal was to improve UI/UX, responsiveness, and maintain functionality while enhancing the user experience.
 
-Currently, two official plugins are available:
+Features and Improvements
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    The entire page is fully responsive and works across all device sizes.
 
-## Expanding the ESLint configuration
+    Selection Highlighting: When a skip is selected, it is highlighted with a blue background to improve visibility.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+    Enhanced Footer Information: The footer now clearly displays: Yard size, Price, 7-day hire duration
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+    Skeleton Loading States: Implemented card skeleton loaders for a smoother user experience while data is being fetched.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+    Button Interaction Effects: Added a press effect when users click buttons for better feedback.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+    Improved Typography: Increased font size for better readability and usability.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+    Fixed Navbar Scroll on Small Screens: The navbar now supports horizontal scrolling on smaller screens for better navigation.
+
+    Total Cost Calculation Function: Implemented a function to calculate the total cost per week. However, there are minor differences from the original site’s calculations.
+
+Technologies Used
+
+    React with Vite
+
+    TypeScript for type safety
+
+    Chakra UI for styling
+
+    React Query for efficient data fetching
+
+
+Installation & Setup
+
+git clone https://github.com/mihalacheD/Skip-select-page-Redesign.git
+cd Skip-select-page-Redesign
+npm install
+npm run dev
+
+Deployment
+
+The project is deployed on Vercel and can be accessed here:
+https://skip-select-page-redesign.vercel.app/
+
+Author
+
+Developed by mihalacheD.
+
