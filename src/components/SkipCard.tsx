@@ -47,7 +47,7 @@ const SkipCard = ({ skip, isSelected, onSelect }: Props) => {
             color="yellow.500"
             px={3}
             py={2}
-            fontSize="large"
+            fontSize={{base: "sm", md: "medium", lg: "large"}}
           >
             <TriangleAlert /> Private Property Only
           </Badge>
@@ -59,7 +59,7 @@ const SkipCard = ({ skip, isSelected, onSelect }: Props) => {
             color="red.500"
             px={3}
             py={2}
-            fontSize="large"
+            fontSize={{base: "sm", md: "medium", lg: "large"}}
           >
              <TriangleAlert /> Not Suitable for Heavy Waste
           </Badge>
